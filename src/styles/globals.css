@@ -5,6 +5,7 @@
 @tailwind utilities;
 
 :root {
+  --primary-color: #00040f;
   --black-gradient: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);
   --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
 }
@@ -32,7 +33,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
 }
 
 .bg-blue-gradient {
@@ -60,7 +60,7 @@
 }
 
 .bg-discount-gradient {
-  background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
+  background: linear-gradient(90deg, #272727 0%, #11101d 100%);
 }
 
 .box-shadow {
@@ -70,6 +70,11 @@
 .sidebar {
   -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.spin {
+  -webkit-animation: spin 5s infinite linear;
+  animation: spin 5s infinite linear;
 }
 
 @-webkit-keyframes slide-top {
@@ -116,8 +121,26 @@
   }
 }
 
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .feature-card:hover {
-  background-image: var(--black-gradient);
+  background: var(--black-gradient);
   box-shadow: var(--card-shadow);
   transition: all 0.3s ease;
 }
@@ -147,4 +170,14 @@
 .white__gradient {
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
+}
+
+.navbar-scrolled {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: var(--primary-color);
+  transition: 0.3s ease-in;
+  padding-block: 1rem;
+  z-index: 100;
 }
