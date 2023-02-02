@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 
-const useScrolledWindow = () => {
+const useScrolledWindow = (height: number) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const onScrollHandler = () => {
-    if (window.scrollY > 0) return setIsScrolled(true);
+    if (window.scrollY > height) return setIsScrolled(true);
     return setIsScrolled(false);
   };
 

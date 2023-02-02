@@ -75,6 +75,27 @@
 .spin {
   -webkit-animation: spin 5s infinite linear;
   animation: spin 5s infinite linear;
+  transform-origin: center center;
+}
+
+.up-down {
+  -webkit-animation: up-down 5s infinite;
+  animation: up-down 5s infinite;
+}
+
+@keyframes up-down {
+  0% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  50% {
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+  }
+  100% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
 }
 
 @-webkit-keyframes slide-top {
@@ -164,20 +185,23 @@
 
 .pink__gradient {
   background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
-  filter: blur(900px);
+  filter: blur(300px);
 }
 
 .white__gradient {
   background: rgba(255, 255, 255, 0.6);
-  filter: blur(750px);
+  filter: blur(200px);
 }
 
-.navbar-scrolled {
+.navbar.scrolled {
   position: fixed;
   width: 100%;
-  top: 0;
   background-color: var(--primary-color);
-  transition: 0.3s ease-in;
+  transition: 0.3s ease;
   padding-block: 1rem;
   z-index: 100;
+  top: -80px;
+}
+.navbar.scrolled.active {
+  top: 0;
 }

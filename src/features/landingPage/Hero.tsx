@@ -14,7 +14,7 @@ const Hero = ({ subtitle }: Props) => {
   return (
     <section
       id="home"
-      className={`${styles.boxWidth} ${styles.paddingX} ${styles.paddingY} flex flex-col md:flex-row`}
+      className={`${styles.boxWidth} ${styles.paddingX} ${styles.paddingY} flex flex-col md:flex-row items-center mt-[90px]`}
     >
       <div className={`flex-1 flex flex-col items-start gap-3`}>
         <div className="flex items-center gap-2 py-[6px] px-4 bg-discount-gradient rounded-[10px]">
@@ -43,12 +43,14 @@ const Hero = ({ subtitle }: Props) => {
         <p className={`${styles.paragraph} max-w-[470px]`}>{subtitle}</p>
       </div>
       <div className="flex-1 flex justify-center relative my-10 md:my-0">
-        <img src={robot} alt="billing" className="w-[70%] h-[70%] md:w-[100%] md:h-[100%] z-[1]" />
-        <div className="absolute top-0 left-0 right-0 bottom-0 spin">
-          <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />
-          <div className="absolute z-[1] w-[80%] h-[80%] rounded-full top-0 bottom-40 white__gradient" />
-          <div className="absolute z-[0] w-[50%] h-[50%] right-20 bottom-20 blue__gradient" />
-        </div>
+        <img
+          src={robot}
+          alt="billing"
+          className="w-[70%] h-[70%] md:w-[100%] md:h-[100%] z-[2] up-down delay-1000"
+        />
+        <div className="absolute top-[10%] left-[35%] z-[0] w-[30%] h-[30%] rounded-full pink__gradient" />
+        <div className="absolute top-[10%] left-[35%] z-[1] w-[50%] h-[50%] rounded-full white__gradient" />
+        <div className="absolute top-[10%] left-[35%] z-[0] w-[30%] h-[30%] rounded-full blue__gradient" />
       </div>
       <div className={`${styles.flexCenter} ss:hidden`}>
         <GetStarted />

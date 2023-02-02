@@ -11,7 +11,11 @@ const Billing = () => {
       className={`relative flex gap-[30px] md:gap-0 ${styles.paddingY} flex-col-reverse md:flex-row md:items-center z-10`}
     >
       <div className={`flex-1 flex justify-center`}>
-        <img src={bill} alt="bill" className="w-[70%] h-[70%] md:w-[100%] md:h-[100%]" />
+        <img
+          src={bill}
+          alt="bill"
+          className="w-[70%] h-[70%] md:w-[100%] md:h-[100%] up-down z-[2] delay-500"
+        />
       </div>
       <div className={`flex-1`}>
         <h2 className="z-10 font-poppins text-white text-[48px] font-semibold leading-[76px]">
@@ -25,11 +29,9 @@ const Billing = () => {
           <img src={apple} alt="apple" />
           <img src={google} alt="google" />
         </div>
-        <div className="absolute top-0 left-0 right-0 bottom-0 spin z-[-10]">
-          <div className="absolute z-[0] w-[50%] h-[50%] left-0 bottom-6 rounded-full pink__gradient opacity-75" />
-          <div className="absolute z-[1] w-[60%] h-[60%] rounded-full left-0 white__gradient opacity-75" />
-          <div className="absolute z-[0] w-[50%] h-[50%] left-0 blue__gradient opacity-75" />
-        </div>
+        <div className="absolute z-[0] w-[30%] h-[30%] rounded-full left-[5%] top-[5%] pink__gradient opacity-75" />
+        <div className="absolute z-[1] w-[50%] h-[50%] rounded-full left-[5%] top-[5%] white__gradient opacity-75" />
+        <div className="absolute z-[0] w-[30%] h-[30%] rounded-full left-[5%] top-[5%] blue__gradient opacity-75" />
       </div>
     </section>
   );

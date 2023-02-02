@@ -23,7 +23,7 @@ const CardDeal = () => {
         <Button className="mt-[48px]">Get Started</Button>
       </div>
       <div className="flex-1 flex justify-center">
-        <img src={card} alt="card" className="w-[70%] h-[70%] md:w-[100%] md:h-[100%]" />
+        <img src={card} alt="card" className="w-[70%] h-[70%] md:w-[100%] md:h-[100%] up-down" />
       </div>
     </section>
   );
